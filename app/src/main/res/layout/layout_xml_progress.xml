@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="XML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.bluepark.semicircleprogressbar.CircleArcProgressBar
+            android:id="@+id/view_progressbar_half"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toTopOf="@id/view_progressbar_semi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:percent="50"
+            app:progressBarColor="#FFC6AC"
+            app:progressBarWidth="50"
+            app:progressPlaceHolderColor="#9E9FA5"
+            app:progressPlaceHolderWidth="20"
+            app:rounded="true"
+            app:shape="Half" />
+
+        <com.bluepark.semicircleprogressbar.CircleArcProgressBar
+            android:id="@+id/view_progressbar_semi"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@id/view_progressbar_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_progressbar_half"
+            app:percent="70"
+            app:progressBarColor="#91C8E4"
+            app:progressBarWidth="70"
+            app:progressPlaceHolderColor="#749BC2"
+            app:progressPlaceHolderWidth="15"
+            app:rounded="true"
+            app:shape="Unfinished" />
+
+        <com.bluepark.semicircleprogressbar.CircleArcProgressBar
+            android:id="@+id/view_progressbar_circle"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_progressbar_semi"
+            app:percent="50"
+            app:progressBarColor="#FBA1B7"
+            app:progressBarWidth="20"
+            app:progressPlaceHolderColor="#FFD1DA"
+            app:progressPlaceHolderWidth="8"
+            app:rounded="false"
+            app:shape="Complete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
